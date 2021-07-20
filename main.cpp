@@ -19,7 +19,7 @@ void addConnectionsFromCommandline(const QStringList &args, Browser *browser)
         QSqlError err = browser->addConnection(url.scheme(), url.path().mid(1), url.host(),
                                                url.userName(), url.password(), url.port(-1));
         if (err.type() != QSqlError::NoError)
-            qDebug() << "无法打开链接" << err;
+            qDebug() << "无法链接:" << err;
     }
 }
 
@@ -27,17 +27,19 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
+    //QMenu *helpMenu = w.menu()->addMenu(QObject::tr("&Help"));
+
     QMainWindow mainWin;
     mainWin.setWindowTitle(QObject::tr("我的收藏夹"));
 
     Browser browser(&mainWin);
     mainWin.setCentralWidget(&browser);
 
-    QMenu *fileMenu = mainWin.menuBar()->addMenu(QObject::tr("点击开始多媒体之旅 "));
+    QMenu *fileMenu = mainWin.menuBar()->addMenu(QObject::tr("开始多媒体之旅   "));
     fileMenu->addAction(QObject::tr("新增链接"),
             [&]() { browser.addConnection(); });
     fileMenu->addSeparator();
-    fileMenu->addAction(QObject::tr("多媒体助手"), []() {
+    fileMenu->addAction(QObject::tr("开启多媒体"), []() {
        menu *w;
        w = new menu();
        w->show();
@@ -55,7 +57,7 @@ int main(int argc, char *argv[])
     addConnectionsFromCommandline(app.arguments(), &browser);
     mainWin.show();
     if (QSqlDatabase::connectionNames().isEmpty())
-        QMetaObject::invokeMethod(&browser, "新增链接", Qt::QueuedConnection);
+        QMetaObject::invokeMethod(&browser, "addConnection", Qt::QueuedConnection);
 
 
 

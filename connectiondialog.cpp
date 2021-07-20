@@ -10,7 +10,6 @@ QSqlConnectionDialog::QSqlConnectionDialog(QWidget *parent)
 
     QStringList drivers = QSqlDatabase::drivers();
 
-    // remove compat names
     drivers.removeAll("QMYSQL3");
     drivers.removeAll("QOCI8");
     drivers.removeAll("QODBC3");

@@ -32,7 +32,6 @@ public:
     QPushButton *pushButton_2;
     QWidget *widget_4;
     QLabel *label_4;
-    QPushButton *pushButton_3;
 
     void setupUi(QWidget *menu)
     {
@@ -94,9 +93,6 @@ public:
         label_4 = new QLabel(widget_4);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(740, 531, 54, 31));
-        pushButton_3 = new QPushButton(widget_4);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(720, 500, 80, 20));
         widget_4->raise();
         widget->raise();
         widget_2->raise();
@@ -120,7 +116,6 @@ public:
         label_3->setText(QCoreApplication::translate("menu", "\345\257\214\346\226\207\346\234\254\347\274\226\350\276\221\345\231\250", nullptr));
         pushButton_2->setText(QString());
         label_4->setText(QCoreApplication::translate("menu", "\351\231\210\345\227\243\345\205\203", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("menu", "PushButton", nullptr));
     } // retranslateUi
 
 };
