@@ -82,19 +82,23 @@ void Browser::addConnection()
             QMessageBox::warning(this, tr("无法打开数据库"), tr("An error occurred while "
                                                                          "opening the connection: ") + db.lastError().text());
         QSqlQuery q("", db);
+        q.exec("create table User (id integer primary key, name varchar)");
+        q.exec("insert into User values(0,'csy')");
+        q.exec("insert into User values(1,'admin'')");
 
-        q.exec("create table Movies (mov_id integer primary key, Title varchar, CollectAddress varchar,year number,Rating number)");
-        q.exec("insert into Movies values (0,'黑客帝国1', 'https://v.youku.com/v_show/id_XMzI3NDE4MTgw.html?source=baidu&refer=sousuotoufang_market.qrwang_00002944_000000_QJFFvi_19031900','1999', '9.1')");
-        q.exec("insert into Movies values (1, '人工智能', 'https://www.iqiyi.com/v_19rrno1q60.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01','2001','8.9')");
-        q.exec("insert into Movies values (2, '模仿游戏', 'https://v.youku.com/v_show/id_XMTUyMTY4MzExMg==.html?spm=a2h1n.8261147.0.0&s=6618f85c420f11e3a705','2014', '8.7')");
-        q.exec("insert into Movies values (3, '表白大工', 'C:\\Users\\86131\\Desktop\\resource','2019', '10.0')");
-        q.exec("insert into Movies values (4, '大工宣传片','C:\\Users\\86131\\Desktop\\resource','2019', '9.9')");
+
+        q.exec("create table Movies (mov_id integer primary key,Title varchar, CollectAddress varchar,year number,Rating number,name varvhar)");
+        q.exec("insert into Movies values (0,'黑客帝国1', 'https://v.youku.com/v_show/id_XMzI3NDE4MTgw.html?source=baidu&refer=sousuotoufang_market.qrwang_00002944_000000_QJFFvi_19031900','1999', '9.1','csy')");
+        q.exec("insert into Movies values (1, '人工智能', 'https://www.iqiyi.com/v_19rrno1q60.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01','2001','8.9','csy')");
+        q.exec("insert into Movies values (2, '模仿游戏', 'https://v.youku.com/v_show/id_XMTUyMTY4MzExMg==.html?spm=a2h1n.8261147.0.0&s=6618f85c420f11e3a705','2014', '8.7','csy')");
+        q.exec("insert into Movies values (3, '表白大工', 'C:\\Users\\86131\\Desktop\\resource','2019', '10.0','admin')");
+        q.exec("insert into Movies values (4, '大工宣传片','C:\\Users\\86131\\Desktop\\resource','2019', '9.9','admin')");
 
         q.exec("create table MoviesClassicLine (line_id integer primary key, Title varchar,ClassLine varchar)");
-        q.exec("insert into MoviesClassicLine values ('0','黑客帝国1','选择是弱者在面对强者时产生的幻觉')");
-        q.exec("insert into MoviesClassicLine values ('1','黑客帝国1','选择是有权利与没有权利者之间的不平衡')");
-        q.exec("insert into MoviesClassicLine values ('2','人工智能','对爱的执着,可以超越一切')");
-        q.exec("insert into MoviesClassicLine values ('3','模仿游戏','有时候，正是那些人们认为的无用之人成就了无人所成之事')");
+        q.exec("insert into MoviesClassicLine values (0,'黑客帝国1','选择是弱者在面对强者时产生的幻觉')");
+        q.exec("insert into MoviesClassicLine values (1,'黑客帝国1','选择是有权利与没有权利者之间的不平衡')");
+        q.exec("insert into MoviesClassicLine values (2,'人工智能','对爱的执着,可以超越一切')");
+        q.exec("insert into MoviesClassicLine values (3,'模仿游戏','有时候，正是那些人们认为的无用之人成就了无人所成之事')");
 
         q.exec("create table Photos (id integer primary key, PhotoName varchar, collect varchar,year varchar,Remark varchar)");
         q.exec("insert into Photos values (0, '威尼斯小镇','C:\\Users\\86131\\Desktop\\resource', '2019', '小镇很美')");
