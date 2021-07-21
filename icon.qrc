@@ -27,5 +27,6 @@
         <file>icon/imageViewer.jpg</file>
         <file>icon/texteditor_78423.png</file>
         <file>icon/background.png</file>
+        <file>icon/background2.png</file>
     </qresource>
 </RCC>

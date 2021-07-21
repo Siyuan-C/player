@@ -60,6 +60,13 @@ int main(int argc, char *argv[])
         QMetaObject::invokeMethod(&browser, "addConnection", Qt::QueuedConnection);
 
 
+      mainWin.setAutoFillBackground(true);
+       QPalette palette;
+       QPixmap pixmap(":/icon/background2.png");
+       palette.setBrush(QPalette::Window, QBrush(pixmap));
+        mainWin.setPalette(palette);
+
+
 
     return app.exec();
 }
