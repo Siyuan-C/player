@@ -30,5 +30,7 @@
         <file>icon/background2.png</file>
         <file>icon/no.png</file>
         <file>icon/yes.png</file>
+        <file>icon/clear.png</file>
+        <file>icon/submit.png</file>
     </qresource>
 </RCC>

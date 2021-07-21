@@ -142,8 +142,8 @@
            <string>清除</string>
           </property>
           <property name="icon">
-           <iconset>
-            <normaloff>icon/clear.png</normaloff>icon/clear.png</iconset>
+           <iconset resource="icon.qrc">
+            <normaloff>:/icon/clear.png</normaloff>:/icon/clear.png</iconset>
           </property>
          </widget>
         </item>
@@ -153,8 +153,8 @@
            <string>提交</string>
           </property>
           <property name="icon">
-           <iconset>
-            <normaloff>icon/submit.png</normaloff>icon/submit.png</iconset>
+           <iconset resource="icon.qrc">
+            <normaloff>:/icon/submit.png</normaloff>:/icon/submit.png</iconset>
           </property>
          </widget>
         </item>
@@ -258,6 +258,8 @@
   <tabstop>connectionWidget</tabstop>
   <tabstop>table</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
  <connections/>
 </ui>

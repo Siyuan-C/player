@@ -207,11 +207,11 @@
      <item>
       <widget class="QPushButton" name="okButton">
        <property name="text">
-        <string/>
+        <string>确认</string>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>icon/yes.png</normaloff>icon/yes.png</iconset>
+        <iconset resource="icon.qrc">
+         <normaloff>:/icon/yes.png</normaloff>:/icon/yes.png</iconset>
        </property>
        <property name="default">
         <bool>true</bool>
@@ -221,11 +221,11 @@
      <item>
       <widget class="QPushButton" name="cancelButton">
        <property name="text">
-        <string/>
+        <string>取消</string>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>icon/no.png</normaloff>icon/no.png</iconset>
+        <iconset resource="icon.qrc">
+         <normaloff>:/icon/no.png</normaloff>:/icon/no.png</iconset>
        </property>
       </widget>
      </item>
@@ -244,6 +244,8 @@
   <tabstop>okButton</tabstop>
   <tabstop>cancelButton</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
  <connections/>
 </ui>

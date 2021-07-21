@@ -84,7 +84,7 @@ void Browser::addConnection()
         QSqlQuery q("", db);
         q.exec("create table User (id integer primary key, name varchar)");
         q.exec("insert into User values(0,'csy')");
-        q.exec("insert into User values(1,'admin'')");
+        q.exec("insert into User values(1,'admin')");
 
 
         q.exec("create table Movies (mov_id integer primary key,Title varchar, CollectAddress varchar,year number,Rating number,name varvhar)");
