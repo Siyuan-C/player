@@ -28,5 +28,7 @@
         <file>icon/texteditor_78423.png</file>
         <file>icon/background.png</file>
         <file>icon/background2.png</file>
+        <file>icon/no.png</file>
+        <file>icon/yes.png</file>
     </qresource>
 </RCC>
